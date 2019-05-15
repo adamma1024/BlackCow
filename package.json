@@ -1,0 +1,22 @@
+{
+  "name": "easy-python",
+  "version": "1.0.0",
+  "description": "project for python",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qq240814476/easy-python.git"
+  },
+  "keywords": [
+    "python"
+  ],
+  "author": "malin",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/qq240814476/easy-python/issues"
+  },
+  "homepage": "https://github.com/qq240814476/easy-python#readme"
+}
