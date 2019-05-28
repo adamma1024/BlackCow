@@ -1,11 +1,20 @@
 '''
 用于发送链接的类
 '''
+from config import config
 
+config = config()
 
 class api:
+    # 设置用户名密码
+    def setUserInfo(self):
+      self.username = str(input("用户名:"))
+      self.passwd = str(input("密码:"))
+      print(self.username)
+      print(self.passwd)
     # 发送登录连接
-    def login():
+    def login(self):
+      '''
       # 点击当前页面的"登录"
       bwr.find_by_text(u"登录").click()
       sleep(3)
@@ -22,9 +31,12 @@ class api:
             sleep(1)
         else:
           break
+      '''
+      print('登录完毕')
 
     # 购票
-    def getTickt():
+    def getTickt(self):
+      '''
       global bwr
       # 使用splinter打开chrome浏览器
       bwr=Browser(driver_name="chrome")
@@ -82,3 +94,5 @@ class api:
           print(u"成功抢到一张宝贵的票")
       except Exception as e:
           print(traceback.print_exc())
+      '''
+      print('抢票成功')

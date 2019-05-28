@@ -8,17 +8,22 @@ author: malin
 喜欢的点个star支持一下谢谢
 qq:240814476
 '''
+
+from api import api
 from splinter.browser import Browser
 from time import sleep
 # traceback模块被用来跟踪异常返回信息
 import traceback
 
-from config import 
-
-# 设定用户名、密码
-username = str(input("用户名:"))
-passwd = str(input("密码:"))
-
 print('黑牛抢票，你值得拥有')
-print(username)
-print(passwd)
+
+api = api()
+
+# 设置用户名密码
+api.setUserInfo()
+
+# 登录
+api.login()
+
+# 买票
+api.getTickt()
