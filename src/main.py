@@ -8,4 +8,15 @@ author: malin
 喜欢的点个star支持一下谢谢
 qq:240814476
 '''
-print('黑牛抢票，你值得拥有\n')
+from splinter.browser import Browser
+from time import sleep
+# traceback模块被用来跟踪异常返回信息
+import traceback
+
+# 设定用户名、密码
+username = str(input("用户名:"))
+passwd = str(input("密码:"))
+
+print('黑牛抢票，你值得拥有')
+print(username)
+print(passwd)
