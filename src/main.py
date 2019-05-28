@@ -13,6 +13,8 @@ from time import sleep
 # traceback模块被用来跟踪异常返回信息
 import traceback
 
+from config import 
+
 # 设定用户名、密码
 username = str(input("用户名:"))
 passwd = str(input("密码:"))
