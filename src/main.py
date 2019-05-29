@@ -20,14 +20,14 @@ print('黑牛抢票，你值得拥有')
 api = api()
 
 
-# 设置用户名密码
-api.setUserInfo()
+# # 设置用户名密码
+# api.setUserInfo()
 
-# 登录
-api.login()
+# # 登录
+# api.login()
 
-# 买票
-api.getTickt()
+# # 买票
+# api.getTickt()
 
 
-'''api.test()'''
+api.test()
