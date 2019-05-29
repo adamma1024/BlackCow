@@ -17,7 +17,7 @@ class api:
       print(self.passwd)
     
     # 测试browser
-    def test(self):dsafasd f
+    def test(self):
         bwr=Browser(driver_name="chrome")
         bwr.visit(config.sh['whgc']['list'])
         sleep(3)
