@@ -38,6 +38,8 @@ class api:
     def testjc(self):
         bwr=Browser(driver_name="chrome")
         bwr.visit(config.jc)
+        searchbox = bwr.find_by_id('search_keywords')
+        keyword = str(input(请输入你想搜索的演出（按回车键搜索）：))
         # 时间
         friday = bwr.find_by_xpath('//li[@i_event_id="86249"]')
         satday = bwr.find_by_xpath('//li[@i_event_id="86268"]')
