@@ -4,7 +4,7 @@
 '''
 from config import config
 from time import sleep
-from splinter.browser import Browser
+from splinter import Browser
 
 config = config()
 
@@ -18,11 +18,12 @@ class api:
     
     # 测试browser
     def test(self):
-        bwr=Browser(driver_name="chrome")dsafasdf 
+        bwr=Browser(driver_name="chrome")
         bwr.visit(config.sh['whgc']['list'])
-        sleep(3)
-        bwr.find_by_text(u"立即登录").click()
-        sleep(3)
+        div = bwr.find_by_xpath('//a[@id="unlogin_div"]')
+        bwr.element_class.mouse_over(div)
+        div.click()
+        # sleep(3)
     # 发送登录连接
     def login(self):
       '''
