@@ -1,3 +1,4 @@
+# encoding: utf-8
 '''
 author: malin
 本人的第一个python小程序
@@ -18,6 +19,7 @@ print('黑牛抢票，你值得拥有')
 
 api = api()
 
+
 # 设置用户名密码
 api.setUserInfo()
 
@@ -26,3 +28,6 @@ api.login()
 
 # 买票
 api.getTickt()
+
+
+'''api.test()'''

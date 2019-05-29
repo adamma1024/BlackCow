@@ -1,3 +1,4 @@
+# encoding: utf-8
 '''
 用于发送链接的类
 '''
@@ -13,7 +14,12 @@ class api:
       self.passwd = str(input("密码:"))
       print(self.username)
       print(self.passwd)
+    
     # 测试browser
+    def test(self):
+        bwr=Browser(driver_name="chrome")
+        bwr.visit(config.sh['whgc']['list'])
+        print(config.sh['whgc']['list'])
     # 发送登录连接
     def login(self):
       '''
