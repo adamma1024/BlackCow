@@ -15,7 +15,7 @@ class config:
   sh = {
     #上汽上海文化广场
     'whgc' : {
-      'list' : 'https://www.baidu.com'
+      'list' : 'https://www.shcstheatre.com/Program/ProgramDetails.aspx?headtype=YanChu&ARTICLE_ID=32973&id=32973'
     }
   }
 
