@@ -3,6 +3,7 @@
 用于发送链接的类
 '''
 from config import config
+from time import sleep
 from splinter.browser import Browser
 
 config = config()
@@ -19,7 +20,8 @@ class api:
     def test(self):
         bwr=Browser(driver_name="chrome")
         bwr.visit(config.sh['whgc']['list'])
-        print(config.sh['whgc']['list'])
+        bwr.find_by_text(u"周六 19:30:00").click()
+        sleep(3)
     # 发送登录连接
     def login(self):
       '''
