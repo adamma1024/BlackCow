@@ -11,12 +11,11 @@ config = config()
 bwr=Browser(driver_name="chrome")
 
 def clickElement(self, ele):
-    try {
+    try:
         bwr.element_class.scroll_to(ele)
         ele.click()
-    } catch(e) {
+    except e:
         print(e)
-    }
 
 class api:
     # 设置用户名密码
@@ -48,20 +47,13 @@ class api:
         bwr=Browser(driver_name="chrome")
         bwr.visit(config.jc)
         searchbox = bwr.find_by_id('search_keywords')
-        keyword = str(input(请输入你想搜索的演出（按回车键搜索）：))
-        searchbox.fill(keyword)
+        keyWord = str(input(请输入你想搜索的演出（按回车键搜索）：))
+        searchbox.fill(keyWord)
         # 点击搜索
         searchBtn = bwr.find_by_xpath('//div[@className="search-btn icon-search-header"]').first
         bwr.element_class.scroll_to(searchBtn)
         searchBtn.click()
-        # 时间
-        friday = bwr.find_by_xpath('//li[@i_event_id="86249"]')
-        satday = bwr.find_by_xpath('//li[@i_event_id="86268"]')
-        sunday = bwr.find_by_xpath('//li[@i_event_id="86270"]')
 
-        day = str(input('你想看哪场的：周五、周六、周日（时间自己查）：'))
-        if day == '周六':
-            day = satday
         # div = bwr.find_by_xpath('//a[@id="unlogin_div"]')
         bwr.element_class.scroll_to(day)
         day.click()
