@@ -33,6 +33,24 @@ class api:
         day.click()
         # 一年阻塞sleep
         sleep(60*60*24*365)
+    
+    # 测试聚橙
+    def testjc(self):
+        bwr=Browser(driver_name="chrome")
+        bwr.visit(config.jc)
+        # 时间
+        friday = bwr.find_by_xpath('//li[@i_event_id="86249"]')
+        satday = bwr.find_by_xpath('//li[@i_event_id="86268"]')
+        sunday = bwr.find_by_xpath('//li[@i_event_id="86270"]')
+
+        day = str(input('你想看哪场的：周五、周六、周日（时间自己查）：'))
+        if day == '周六':
+            day = satday
+        # div = bwr.find_by_xpath('//a[@id="unlogin_div"]')
+        bwr.element_class.scroll_to(day)
+        day.click()
+        # 一年阻塞sleep
+        sleep(60*60*24*365)
     # 发送登录连接
     def login(self):
       '''

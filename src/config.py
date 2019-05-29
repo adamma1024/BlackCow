@@ -18,6 +18,7 @@ class config:
       'list' : 'https://www.shcstheatre.com/Program/ProgramDetails.aspx?headtype=YanChu&ARTICLE_ID=32973&id=32973'
     }
   }
+  jc: 'http://www.juooo.com/'
 
   #延时时长
   #请求间隔
