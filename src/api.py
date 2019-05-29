@@ -31,7 +31,8 @@ class api:
         # div = bwr.find_by_xpath('//a[@id="unlogin_div"]')
         bwr.element_class.scroll_to(day)
         day.click()
-        sleep(100)
+        # 一年阻塞sleep
+        sleep(60*60*24*365)
     # 发送登录连接
     def login(self):
       '''
