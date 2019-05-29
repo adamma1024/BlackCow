@@ -4,7 +4,7 @@
 '''
 from config import config
 from time import sleep
-from splinter import Browser
+from splinter.browser import Browser
 
 config = config()
 
@@ -26,12 +26,12 @@ class api:
         sunday = bwr.find_by_xpath('//li[@i_event_id="86270"]')
 
         day = str(input('你想看哪场的：周五、周六、周日（时间自己查）：'))
-        if day == '周五' then
-            day = friday
+        if day == '周六':
+            day = satday
         # div = bwr.find_by_xpath('//a[@id="unlogin_div"]')
-        bwr.element_class.mouse_over(day)
-        div.click()
-        # sleep(3)
+        bwr.element_class.scroll_to(day)
+        day.click()
+        sleep(100)
     # 发送登录连接
     def login(self):
       '''
