@@ -10,7 +10,6 @@ qq:240814476
 '''
 
 from api import api
-from splinter.browser import Browser
 from time import sleep
 # traceback模块被用来跟踪异常返回信息
 import traceback

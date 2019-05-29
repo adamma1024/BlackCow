@@ -2,6 +2,7 @@
 用于发送链接的类
 '''
 from config import config
+from splinter.browser import Browser
 
 config = config()
 
@@ -12,6 +13,7 @@ class api:
       self.passwd = str(input("密码:"))
       print(self.username)
       print(self.passwd)
+    # 测试browser
     # 发送登录连接
     def login(self):
       '''
