@@ -20,7 +20,8 @@ class api:
     def test(self):
         bwr=Browser(driver_name="chrome")
         bwr.visit(config.sh['whgc']['list'])
-        bwr.find_by_text(u"周六 19:30:00").click()
+        sleep(3)
+        bwr.find_by_text(u"立即登录").click()
         sleep(3)
     # 发送登录连接
     def login(self):
