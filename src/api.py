@@ -8,6 +8,16 @@ from splinter.browser import Browser
 
 config = config()
 
+bwr=Browser(driver_name="chrome")
+
+def clickElement(self, ele):
+    try {
+        bwr.element_class.scroll_to(ele)
+        ele.click()
+    } catch(e) {
+        print(e)
+    }
+
 class api:
     # 设置用户名密码
     def setUserInfo(self):
@@ -17,8 +27,7 @@ class api:
       print(self.passwd)
     
     # 测试browser
-    def test(self):
-        bwr=Browser(driver_name="chrome")
+    def test(self): 
         bwr.visit(config.sh['whgc']['list'])
         # 时间
         friday = bwr.find_by_xpath('//li[@i_event_id="86249"]')
@@ -40,6 +49,11 @@ class api:
         bwr.visit(config.jc)
         searchbox = bwr.find_by_id('search_keywords')
         keyword = str(input(请输入你想搜索的演出（按回车键搜索）：))
+        searchbox.fill(keyword)
+        # 点击搜索
+        searchBtn = bwr.find_by_xpath('//div[@className="search-btn icon-search-header"]').first
+        bwr.element_class.scroll_to(searchBtn)
+        searchBtn.click()
         # 时间
         friday = bwr.find_by_xpath('//li[@i_event_id="86249"]')
         satday = bwr.find_by_xpath('//li[@i_event_id="86268"]')
