@@ -18,7 +18,7 @@ class api:
     
     # 测试browser
     def test(self):
-        bwr=Browser(driver_name="chrome")
+        bwr=Browser(driver_name="chrome")dsafasdf 
         bwr.visit(config.sh['whgc']['list'])
         sleep(3)
         bwr.find_by_text(u"立即登录").click()
