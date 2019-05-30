@@ -47,16 +47,12 @@ class api:
         bwr=Browser(driver_name="chrome")
         bwr.visit(config.jc)
         searchbox = bwr.find_by_id('search_keywords')
-        keyWord = str(input(请输入你想搜索的演出（按回车键搜索）：))
+        keyWord = str(input('请输入你想搜索的演出（按回车键搜索）：'))
         searchbox.fill(keyWord)
         # 点击搜索
         searchBtn = bwr.find_by_xpath('//div[@className="search-btn icon-search-header"]').first
         bwr.element_class.scroll_to(searchBtn)
         searchBtn.click()
-
-        # div = bwr.find_by_xpath('//a[@id="unlogin_div"]')
-        bwr.element_class.scroll_to(day)
-        day.click()
         # 一年阻塞sleep
         sleep(60*60*24*365)
     # 发送登录连接

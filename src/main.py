@@ -29,4 +29,5 @@ api = api()
 # api.getTickt()
 
 
-api.test()
+# api.test()
+api.testjc()
