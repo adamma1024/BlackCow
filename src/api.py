@@ -52,7 +52,9 @@ class api:
         # 点击搜索
         searchBtn = bwr.find_by_xpath('//div[@class="search-btn icon-search-header"]').first
         clickElement(searchBtn)
-        # 一年阻塞sleep
+        # 爬虫展示list
+        
+        # sleep
         sleep(1000)
     # 发送登录连接
     def login(self):
