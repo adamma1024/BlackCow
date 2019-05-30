@@ -10,7 +10,7 @@ config = config()
 
 bwr=Browser(driver_name="chrome")
 
-def clickElement(self, ele):
+def clickElement(ele):
     try:
         bwr.element_class.scroll_to(ele)
         ele.click()
@@ -40,7 +40,7 @@ class api:
         bwr.element_class.scroll_to(day)
         day.click()
         # 一年阻塞sleep
-        sleep(60*60*24*365)
+        sleep(100)
     
     # 测试聚橙
     def testjc(self):
@@ -50,11 +50,10 @@ class api:
         keyWord = str(input('请输入你想搜索的演出（按回车键搜索）：'))
         searchbox.fill(keyWord)
         # 点击搜索
-        searchBtn = bwr.find_by_xpath('//div[@className="search-btn icon-search-header"]').first
-        bwr.element_class.scroll_to(searchBtn)
-        searchBtn.click()
+        searchBtn = bwr.find_by_xpath('//div[@class="search-btn icon-search-header"]').first
+        clickElement(searchBtn)
         # 一年阻塞sleep
-        sleep(60*60*24*365)
+        sleep(1000)
     # 发送登录连接
     def login(self):
       '''
