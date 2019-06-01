@@ -11,8 +11,6 @@ qq:240814476
 '''
 
 from api import api
-# traceback模块被用来跟踪异常返回信息
-import traceback
 
 print('黑牛抢票，你值得拥有')
 

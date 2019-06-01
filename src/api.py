@@ -5,6 +5,8 @@
 from config import config
 from time import sleep
 from splinter.browser import Browser
+# traceback模块被用来跟踪异常返回信息
+import traceback
 
 config = config()
 
